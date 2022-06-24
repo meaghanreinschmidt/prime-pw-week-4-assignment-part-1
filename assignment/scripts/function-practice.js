@@ -15,50 +15,78 @@ console.log('Test - should say "Hello World!"', hello());
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName( name ) {
-  return;
+  name = 'Maddie';
+  return name;
 }
 // Remember to call the function to test
-
+console.log('Hello,', helloName() + '!');
 
 // 3. Function to add two numbers together & return the result
-function addNumbers( firstNumber ) {
+function addNumbers( firstNumber, secondNumber) {
+  firstNumber = 29;
+  secondNumber = 3;
+  return firstNumber + secondNumber;
   // return firstNumber + secondNumber;
 }
+console.log('The added numbers equal:', addNumbers());
 
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree( ){
-
+function multiplyThree( firstNumber, secondNumber, thirdNumber){
+  firstNumber = 42;
+  secondNumber = 16;
+  thirdNumber = 1;
+  return firstNumber * secondNumber * thirdNumber;
 }
-
+console.log('The multiplied numbers equal:', multiplyThree());
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
   if ( number > 0 ){
-    return;
+    return true;
+  } else {
+    return false;
   }
-    return;
 }
 // Call the function to test each outcome (true & false) 
+console.log('True or False?', isPositive(17));
 // Write a separate console.log statement for each outcome
 console.log( 'isPositive - should say true', isPositive(3) );
+console.log('3 is greater than 0:', isPositive(3));
 console.log( 'isPositive - should say false', isPositive(0) );
+console.log('0 is greater than 0:', isPositive(0));
 console.log( 'isPositive - should say false', isPositive(-3) );
-
+console.log('-3 is greater than 0:', isPositive(-3));
+// ADD MATH?
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
-function getLast( array ) {
 
+function getLast(hungryArray= ['Pizza', 'Bagels', 'Pepperoni', 'Bagel Bites']) {
+  if (hungryArray.length >= 0) {
+    let theLastItem = hungryArray[hungryArray.length - 1];
+    return theLastItem;
+  } else {
+    return 'undefined';
+  }
+  
 }
+console.log(getLast());
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-function find( value, array ){
-  
+
+function find(value, differentArray){
+  for(let i = 0; i < differentArray.length; i++);
+  if (i = value) {
+    return true;
+  } else {
+    return false;
+  }
 }
+
 
 // ----------------------
 // Stretch Goals
