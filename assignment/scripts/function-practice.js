@@ -15,8 +15,7 @@ console.log('Test - should say "Hello World!"', hello());
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName( name ) {
-  name = 'Maddie';
-  return name;
+  return 'Maddie';
 }
 // Remember to call the function to test
 console.log('Hello,', helloName() + '!');
@@ -25,18 +24,15 @@ console.log('Hello,', helloName() + '!');
 function addNumbers( firstNumber, secondNumber) {
   firstNumber = 29;
   secondNumber = 3;
-  return firstNumber + secondNumber;
+  return 29 + 3;
   // return firstNumber + secondNumber;
 }
 console.log('The added numbers equal:', addNumbers());
-
+//////////////////////////////////////////////////////////What format to use for return???///////////
 
 // 4. Function to multiply three numbers & return the result
 function multiplyThree( firstNumber, secondNumber, thirdNumber){
-  firstNumber = 42;
-  secondNumber = 16;
-  thirdNumber = 1;
-  return firstNumber * secondNumber * thirdNumber;
+  return 42 * 16 * 1;
 }
 console.log('The multiplied numbers equal:', multiplyThree());
 
@@ -58,7 +54,7 @@ console.log( 'isPositive - should say false', isPositive(0) );
 console.log('0 is greater than 0:', isPositive(0));
 console.log( 'isPositive - should say false', isPositive(-3) );
 console.log('-3 is greater than 0:', isPositive(-3));
-// ADD MATH?
+// ADD MATH? ////////////////////////////////////////////////////////////////////////////////////////
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
@@ -78,14 +74,16 @@ console.log(getLast());
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 
-function find(value, differentArray){
-  for(let i = 0; i < differentArray.length; i++);
-  if (i = value) {
-    return true;
-  } else {
-    return false;
-  }
-}
+// function find(value, differentArray) {
+//   for(let i = 0; i < differentArray.length; i++) {
+//     if () { // Don't use Array.includes, Array.indexOf, or Array.find/////////////////////////////
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   }
+// }
+// console.log('Testing:', find(3, [4, 5, 6, 7]));
 
 
 // ----------------------
@@ -94,14 +92,20 @@ function find(value, differentArray){
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-
+ if(letter === string.charAt(0)) {
+  return true;
+ } else {
+  return false;
+ }
 }
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
-function sumAll( ) {
+function sumAll() {
+  
   let sum = 0
+
   // TODO: loop to add items
   return sum;
 }
