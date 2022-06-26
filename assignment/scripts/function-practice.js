@@ -137,20 +137,57 @@ console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
-// function sumAll() {
+/**
+ * Takes in an array and adds all of the numbers in the array
+ * @param numbersArray an array of numbers
+ * @returns Returns a number that equals the sum of all numbers in the array
+ */
 
-//   let sum = 0
-
-//   // TODO: loop to add items
-//   return sum;
-// }
+function sumAll(numbersArray) {
+  let sum = 0
+  // TODO: loop to add items
+  for(let i = 0; i < numbersArray.length; i++) {
+    sum += numbersArray[i];
+  }
+  return sum;
+}
+console.log(sumAll([76, 44, 53]));
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
+/**
+ * Takes in array and sorts out to return only positive numbers
+ * @return Returns positive values in array
+ */
+const inputArray = [-7, 2, -3, 4, -10, 11, 17, -22];
 
-
+function getPositives() {
+  let positives = [];
+  for(let i = 0; i < inputArray.length; i++) {
+    if (inputArray[i] > 0) {
+      positives.push(inputArray[i]);
+    }
+  }
+  return positives;
+}
+console.log(getPositives(inputArray));
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it
+// CodeWars: Create a function that takes an integer as an 
+// argument and returns "Even" for even numbers or "Odd" for odd numbers.
+/**
+ * Takes in a number and returns even for even numbera and odd for odd numbers.
+ * @param {number} number Number that will return as even or odd 
+ * @returns Returns console.log depending on number being even or odd
+ */
+function even_or_odd(number) {
+  if (number % 2 === 0) {
+    console.log('The number is even!');
+  } else {
+    console.log('The number is odd!');
+  }
+}
+even_or_odd(12);
